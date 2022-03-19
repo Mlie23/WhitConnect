@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Output</title>
+
+	<!-- INCLUDING JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.5.1.js">
+	</script>
+
+	<!-- CSS FOR STYLING THE PAGE -->
+	<style>
+		table {
+			margin: 0 auto;
+			font-size: large;
+			border: 1px solid black;
+		}
+
+		h1 {
+			text-align: center;
+			color: #ff09c2;
+			font-size: xx-large;
+			font-family: 'Gill Sans',
+				'Gill Sans MT', ' Calibri',
+				'Trebuchet MS', 'sans-serif';
+		}
+
+		td {
+			background-color: #E4F5D4;
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			font-weight: bold;
+			border: 1px solid black;
+			padding: 10px;
+			text-align: center;
+		}
+
+		td {
+			font-weight: lighter;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+            <form>
+                <select onchange="getPreferences(this.value)" name="countries">
+                    <option value="">Choose a preference</option>
+                    <option value="internship">Internship</option>
+                    <option value="interest">Interest</option>
+                    <option value="year">Year</option>
+                </select>
+             
+                <select name="cities" id="cities" disabled>
+                    <option value="">Choose</option>
+                </select>
+            </form>
+             
+            <script src="script.js"></script> <!-- Link to the javascript file -->
+            
+            
+		<h1>Results</h1>
+
+		<!-- TABLE CONSTRUCTION-->
+		<table id='table'>
+			<!-- HEADING FORMATION -->
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Email</th>
+				<th>Interest</th>
+                <th>Internship</th>
+                <th>Year</th>
+			</tr>
+            
+
+			<script>
+				$(document).ready(function () {
+
+					// FETCHING DATA FROM JSON FILE
+					$.getJSON("gfgdetails.json",
+							function (data) {
+						var student = '';
+
+						// ITERATING THROUGH OBJECTS
+						$.each(data, function (key, value) {
+                            if (value.age !=0)
+                            {
+							//CONSTRUCTION OF ROWS HAVING
+							// DATA FROM JSON OBJECT
+							student += '<tr>';
+							student += '<td>' +
+								value.name + '</td>';
+
+							student += '<td>' +
+								value.age + '</td>';
+
+							student += '<td>' +
+								value.email + '</td>';
+
+							student += '<td>' +
+								value.interest + '</td>';
+                            student+='<td>'+
+                                value.Internship+'</td>';
+                            student+='<td>'+
+                                value.Year+'</td>';
+							student += '</tr>';
+                            }
+						});
+						
+						//INSERTING ROWS INTO TABLE
+						$('#table').append(student);
+					});
+				});
+			</script>
+	</section>
+</body>
+
+</html>
