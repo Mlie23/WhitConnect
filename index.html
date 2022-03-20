@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="table.css">
 	<link rel="stylesheet" href="button.css">
 	<link rel="stylesheet" href="dropdown.css">
+	<link rel="stylesheet" href="index.css">
 	<!-- INCLUDING JQUERY-->
 	<script src="https://code.jquery.com/jquery-3.5.1.js">
 	</script>
@@ -48,40 +49,107 @@
 
 <body>
 	<section>
+		<form id="info">
+			<select onchange=getPreferences() name="pref" id="pref" class="drop-down">
+				<option value="">Choose a preference</option>
+				<option value="internship">Internship</option>
+				<option value="interest">Interest</option>
+				<option value="year">Year</option>
+				<option value="major">Major</option>
+			</select>
 
-            <form id ="info">
-                <select onchange=getPreferences() name="countries" id ="countries" class="drop-down" >
-                    <option value="" >Choose a preference</option>
-                    <option value="internship">Internship</option>
-                    <option value="interest">Interest</option>
-                    <option value="year">Year</option>
-					<option value="major">Major</option>
-                </select>
-             
-                <select name="cities" id="cities" onchange=get_specific() disabled>
-                    <option value="">Choose</option>
-                </select>
-            </form>
-            <button onclick="draw_table()" class = "button-1">Search</button>
-            <script src="script.js"></script> <!-- Link to the javascript file -->
- 
+			<select name="spec" id="spec" onchange=get_specific() disabled>
+				<option value="">Choose</option>
+			</select>
+		</form>
+		<button onclick="draw_table()" class="button-1">Search</button>
+		<script src="script.js"></script> <!-- Link to the javascript file -->
+		<button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+			Create New User
+		</button>
 		<h1>Results</h1>
 
 		<!-- TABLE CONSTRUCTION-->
-		<table id ="table" class ="container">
+		<table id="table" class="container">
 			<!-- HEADING FORMATION -->
 			<tr>
 				<th>Name</th>
 				<th>Age</th>
 				<th>Email</th>
 				<th>Interest</th>
-                <th>Internship</th>
-                <th>Year</th>
+				<th>Internship</th>
+				<th>Year</th>
 				<th>Major</th>
 			</tr>
-            
 
+			<section id="newUser">
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content clearfix">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+									aria-hidden="true">×</span></button>
+							<div class="modal-body">
+								<h3 class="title">Create a New User</h3>
+								<div class="form-group">
+									<label for="name">Name: </label>
+									<input type="text" class="form-control" id="name" name="name"
+										placeholder="Name"><br>
+								</div>
+								<div class="form-group">
+									<label for="age">Age: </label>
+									<input type="number" class="form-control" id="age" name="age" placeholder="Age"><br>
+								</div>
+								<div class="form-group">
+									<label for="email">Email: </label>
+									<input type="email" class="form-control" id="email" name="email"
+										placeholder="Email"><br>
+								</div>
+								<div class="form-group">
+									<label for="interest">Interest: </label>
+									<input type="text" class="form-control" id="interest" name="interest"
+										placeholder="Interest"><br>
+								</div>
+								<div class="form-group">
+									<label for="internship">Internship: </label>
+									<input type="text" class="form-control" id="internship" name="internship" placeholder="Internship"><br>
+								</div>
+								<div class="form-group">
+									<label for="year">Year: </label>
+									<input type="year" class="form-control" id="year" name="year"
+										placeholder="Year"><br>
+								</div>
+								<div class="form-group">
+									<label for="major">Major: </label>
+									<input type="text" class="form-control" id="major" name="major"
+										placeholder="Major"><br>
+								</div>
+								<!-- <div class="form-group">
+							<span class="input-icon"><i class="fa fa-user"></i></span>
+							<input type="email" class="form-control" placeholder="Enter Your Name">
+						</div>
+						<div class="form-group">
+							<span class="input-icon"><i class="fas fa-key"></i></span>
+							<input type="password" class="form-control" placeholder="Password">
+						</div>
+						<div class="form-group checkbox">
+							<input type="checkbox">
+							<label>Remamber me</label>
+						</div>
+						<a href="" class="forgot-pass">Forgot Password?</a> -->
+								<button class="btn">Login</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
 	</section>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>

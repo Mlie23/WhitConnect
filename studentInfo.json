@@ -1,0 +1,80 @@
+[{
+        "name": "Alex Meraz",
+        "age": 24,
+        "email": "ameraz@email.com",
+        "interest":["Bowling","Soccer","Cooking"],
+        "internship":["Google"],
+        "year":"Junior",
+        "major":"Computer Science"
+      }, {
+        "name": "Mohammed Rafi",
+        "age": 21,
+        "email": "mrafi@email.com",
+        "interest":["Bowling"],
+        "internship":["Microsoft","Google"],
+        "year":"Sophomore",
+        "major":"Computer Science"
+      }, {
+        "name": "Raja Tamil",
+        "age": 31,
+        "email": "rtamil@email.com",
+        "interest":["Soccer","bowling"],
+        "internship":["Google","Faithlife"],
+        "year":"Junior",
+        "major":"Computer Science"
+      }, {
+        "name": "Sundar Pichai",
+        "age": 21,
+        "email": "spichai@email.com",
+        "interest":["Bowling","Swimming"],
+        "internship":["Microsoft","F5"],
+        "year":"Junior",
+        "major":"Computer Science"
+      },
+      {
+        "name": "Nirjal Shakya",
+        "age": 21,
+        "email": "nshakya@email.com",
+        "interest":["Bowling","Swimming"],
+        "internship":["Microsoft","Schweitzer"],
+        "year":"Junior",
+        "major":"Computer Science"
+      },
+      {
+        "name": "Jan Doe",
+        "age": 21,
+        "email": "Jdoe@email.com",
+        "interest":["Dating","Swimming"],
+        "internship":["Microsoft","Apple"],
+        "year":"Graduated",
+        "major":"Computer Science"
+      },
+      {
+        "name": "Michael Lie",
+        "age": 21,
+        "email": "mlie@email.com",
+        "interest":["Bowling","Swimming"],
+        "internship":["Google","Apple"],
+        "year":"Junior",
+        "major":"Computer Science"
+      },
+      {
+        "name": "Satish Parajuli",
+        "age": 21,
+        "email": "sparajuli@email.com",
+        "interest":["Bowling","Swimming","Volleyball"],
+        "internship":["Microsoft","Schweitzer"],
+        "year":"Junior",
+        "major":"Computer Science"
+      },
+      {
+        "name": "Mark",
+        "age": 21,
+        "email": "mark@email.com",
+        "interest":["Bowling","Swimming","Travelling"],
+        "internship":["FaithLife","F5"],
+        "year":"Junior",
+        "major":"Computer Science"
+      }
+      
+]

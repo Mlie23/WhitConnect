@@ -1,36 +1,59 @@
 function getPreferences() {
-   var country = document.getElementById("countries").value;
-   let citiesDropDown = document.querySelector("#cities");
+   var pref = document.getElementById("pref").value;
+   let specDropDown = document.querySelector("#spec");
 
-   if (country.trim() === "") {
-      citiesDropDown.disabled = true;
-      citiesDropDown.selectedIndex = 0;
+   if (pref.trim() === "") {
+      specDropDown.disabled = true;
+      specDropDown.selectedIndex = 0;
       return false;
    }
 
    // AJAX request with fetch()
-   fetch("countries.json")
+   fetch("dataStorage.json")
       .then(function (response) {
          return response.json();
       })
       .then(function (data) {
-         let cities = data[country];
+         let spec = data[pref];
          let out = "";
          out += `<option value="">Choose a specific preference</option>`;
-         for (let city of cities) {
-            out += `<option value="${city}">${city}</option>`;
+         for (let s of spec) {
+            out += `<option value="${s}">${s}</option>`;
          }
-         citiesDropDown.innerHTML = out;
-         citiesDropDown.disabled = false;
+         specDropDown.innerHTML = out;
+         specDropDown.disabled = false;
       });
 
-   return country;
+   return pref;
 
 }
 
 function get_specific() {
-   var specific = document.getElementById("cities").value;
+   var specific = document.getElementById("spec").value;
    return specific;
+}
+
+function studentsList(value) {
+   var student = '<tr>';
+   student += '<td>' +
+      value.name + '</td>';
+
+   student += '<td>' +
+      value.age + '</td>';
+
+   student += '<td> <a href=mailto:"' + value.email.toString() + '">' +
+      value.email + "</a>" + '</td>';
+
+   student += '<td>' +
+      value.interest + '</td>';
+   student += '<td>' +
+      value.internship + '</td>';
+   student += '<td>' +
+      value.year + '</td>';
+   student += '<td>' +
+      value.major + '</td>';
+   student += '</tr>';
+   return student;
 }
 
 
@@ -38,7 +61,7 @@ function draw_table() {
    var preferences = getPreferences();
    var specific = get_specific();
    // FETCHING DATA FROM JSON FILE
-   $.getJSON("gfgdetails.json",
+   $.getJSON("studentInfo.json",
       function (data) {
          var student = '';
          student += "<tr>" +
@@ -50,32 +73,11 @@ function draw_table() {
             "       <th>Year</th>" +
             "	<th>Major</th>" +
             "</tr>";
-         var hasData = false;
          // ITERATING THROUGH OBJECTS
          if (preferences == "interest" || preferences == "internship") {
             $.each(data, function (key, value) {
-               console.log(specific);
-               console.log(value[preferences]);
-               if (value[preferences].indexOf(specific) >= 0 ){
-                  student += '<tr>';
-                  student += '<td>' +
-                     value.name + '</td>';
-   
-                  student += '<td>' +
-                     value.age + '</td>';
-   
-                  student += '<td> <a href=mailto:"'+value.email.toString()+'">'+ 
-                     value.email + "</a>"+'</td>';
-   
-                  student += '<td>' +
-                     value.interest + '</td>';
-                  student += '<td>' +
-                     value.internship + '</td>';
-                  student += '<td>' +
-                     value.year + '</td>';
-                  student += '<td>' +
-                     value.major + '</td>';
-                  student += '</tr>';
+               if (value[preferences].indexOf(specific) >= 0) {
+                  student += studentsList(value);
                }
             });
          } else {
@@ -83,29 +85,11 @@ function draw_table() {
                if (value[preferences] == specific) {
                   //CONSTRUCTION OF ROWS HAVING
                   // DATA FROM JSON OBJECT
-                  student += '<tr>';
-                  student += '<td>' +
-                     value.name + '</td>';
-   
-                  student += '<td>' +
-                     value.age + '</td>';
-   
-                  student += '<td>' +
-                     value.email + '</td>';
-   
-                  student += '<td>' +
-                     value.interest + '</td>';
-                  student += '<td>' +
-                     value.internship + '</td>';
-                  student += '<td>' +
-                     value.year + '</td>';
-                  student += '<td>' +
-                     value.major + '</td>';
-                  student += '</tr>';
+                  student += studentsList(value);
                }
             });
          }
-         
+
          // if (hasData) {
          //    student += '<tr>'+
          //    '<td colspan = "7>' +
@@ -117,3 +101,11 @@ function draw_table() {
          document.getElementById("table").innerHTML = student;
       });
 }
+
+function openForm() {
+   document.getElementById("myForm").style.display = "block";
+ }
+ 
+ function closeForm() {
+   document.getElementById("myForm").style.display = "none";
+ }

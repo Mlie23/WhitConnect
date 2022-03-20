@@ -1,7 +1,7 @@
 import json 
 
-openStorage = open('countries.json','r')
-openUser = open('gfgdetails.json',"r")
+openStorage = open('dataStorage.json','r')
+openUser = open('studentInfo.json',"r")
 
 storageData = json.load(openStorage)
 userData = json.load(openUser)
@@ -28,6 +28,6 @@ interestData.sort()
 storageData['internship'] = internshipData
 storageData['interest'] = interestData
 
-openStorage = open('countries.json','w+')
+openStorage = open('dataStorage.json','w+')
 openStorage.write(json.dumps(storageData))
 openStorage.close()
