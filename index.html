@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Output</title>
-
+	<link rel="stylesheet" href="table.css">
+	<link rel="stylesheet" href="button.css">
+	<link rel="stylesheet" href="dropdown.css">
 	<!-- INCLUDING JQUERY-->
 	<script src="https://code.jquery.com/jquery-3.5.1.js">
 	</script>
@@ -18,7 +20,7 @@
 
 		h1 {
 			text-align: center;
-			color: #ff09c2;
+			color: #ffffff;
 			font-size: xx-large;
 			font-family: 'Gill Sans',
 				'Gill Sans MT', ' Calibri',
@@ -33,7 +35,7 @@
 		th,
 		td {
 			font-weight: bold;
-			border: 1px solid black;
+			border: 2px solid black;
 			padding: 10px;
 			text-align: center;
 		}
@@ -46,26 +48,26 @@
 
 <body>
 	<section>
-            <form>
-                <select onchange="getPreferences(this.value)" name="countries">
-                    <option value="">Choose a preference</option>
+			
+            <form id ="info">
+                <select onchange=getPreferences() name="countries" id ="countries" class="drop-down" >
+                    <option value="" >Choose a preference</option>
                     <option value="internship">Internship</option>
                     <option value="interest">Interest</option>
                     <option value="year">Year</option>
                 </select>
              
-                <select name="cities" id="cities" disabled>
+                <select name="cities" id="cities" onchange=get_specific() disabled>
                     <option value="">Choose</option>
                 </select>
             </form>
-             
+            <button onclick="draw_table()" class = "button-1">Search</button>
             <script src="script.js"></script> <!-- Link to the javascript file -->
-            
-            
+ 
 		<h1>Results</h1>
 
 		<!-- TABLE CONSTRUCTION-->
-		<table id='table'>
+		<table id ="table" class ="container">
 			<!-- HEADING FORMATION -->
 			<tr>
 				<th>Name</th>
@@ -74,48 +76,10 @@
 				<th>Interest</th>
                 <th>Internship</th>
                 <th>Year</th>
+				<th>Major</th>
 			</tr>
             
 
-			<script>
-				$(document).ready(function () {
-
-					// FETCHING DATA FROM JSON FILE
-					$.getJSON("gfgdetails.json",
-							function (data) {
-						var student = '';
-
-						// ITERATING THROUGH OBJECTS
-						$.each(data, function (key, value) {
-                            if (value.age !=0)
-                            {
-							//CONSTRUCTION OF ROWS HAVING
-							// DATA FROM JSON OBJECT
-							student += '<tr>';
-							student += '<td>' +
-								value.name + '</td>';
-
-							student += '<td>' +
-								value.age + '</td>';
-
-							student += '<td>' +
-								value.email + '</td>';
-
-							student += '<td>' +
-								value.interest + '</td>';
-                            student+='<td>'+
-                                value.Internship+'</td>';
-                            student+='<td>'+
-                                value.Year+'</td>';
-							student += '</tr>';
-                            }
-						});
-						
-						//INSERTING ROWS INTO TABLE
-						$('#table').append(student);
-					});
-				});
-			</script>
 	</section>
 </body>
 
