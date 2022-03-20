@@ -9,25 +9,25 @@ userData = json.load(openUser)
 
 openUser.close()
 
-internshipData = storageData['Internship']
-interestData = storageData['Interest']
+internshipData = storageData['internship']
+interestData = storageData['interest']
 
 print(internshipData)
 
 for user in userData:
-    for uIntern in user['Internship']:
+    for uIntern in user['internship']:
         if uIntern not in internshipData:
             internshipData.append(uIntern)
-    for uInterest in user['Interest']:
+    for uInterest in user['interest']:
         if uInterest not in interestData:
             interestData.append(uInterest)
 
 internshipData.sort()
 interestData.sort() 
 
-storageData['Internship'] = internshipData
-storageData['Interest'] = interestData
+storageData['internship'] = internshipData
+storageData['interest'] = interestData
 
-openStorage = open('storedInfo.json','w+')
+openStorage = open('countries.json','w+')
 openStorage.write(json.dumps(storageData))
 openStorage.close()

@@ -1,5 +1,1 @@
-{
-    "internship": ["Microsoft","Google","FaithLife","F5","Schweitzer","Apple"],
-    "interest": ["Dating","Cooking","Coding","Swimming","Eating","Travelling","Snowboarding","Soccer","Bowling"],
-    "year": ["Volleyball","Freshman","Sophomore","Junior","Senior","Graduated"]
- }
+{"internship": ["Apple", "F5", "FaithLife", "Faithlife", "Google", "Microsoft", "Schweitzer"], "interest": ["Bowling", "Coding", "Cooking", "Dating", "Eating", "Snowboarding", "Soccer", "Swimming", "Travelling", "Volleyball", "bowling"], "year": ["Volleyball", "Freshman", "Sophomore", "Junior", "Senior", "Graduated"]}
