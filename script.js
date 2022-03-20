@@ -16,7 +16,7 @@ function getPreferences() {
       .then(function (data) {
          let spec = data[pref];
          let out = "";
-         out += `<option value="">Choose a specific preference</option>`;
+         out += `<option value="None">Choose a specific preference</option>`;
          for (let s of spec) {
             out += `<option value="${s}">${s}</option>`;
          }
@@ -31,6 +31,53 @@ function getPreferences() {
 function get_specific() {
    var specific = document.getElementById("spec").value;
    return specific;
+}
+
+function addNewUser() {
+   var name = document.getElementById("name").value;
+   var age = document.getElementById("age").value;
+   var email = document.getElementById("email").value;
+   var interest = document.getElementById("interest").value;
+   var internship = document.getElementById("internship").value;
+   var year = document.getElementById("major").value;
+   var major = document.getElementById("year").value;
+   console.log(name + " " + age);
+   if (interest.indexOf(', ') >= 0) {
+      interest = interest.split(', ');
+   }
+   if (internship.indexOf(', ') >= 0) {
+      internship = internship.split(', ');
+   }
+
+   // // Defining new data to be added
+   // let newInfo = {
+   //    "name": name,
+   //    "age": age,
+   //    "email": email,
+   //    "interest": interest,
+   //    "internship": internship,
+   //    "year": year,
+   //    "major": major
+   // }
+
+
+   alert(
+      "New User has been Created!" + "\n" +
+      "Name: " + name + "\n" +
+      "Age: " + age + "\n" +
+      "Email: " + email + "\n" +
+      "Interest: " + interest + "\n" +
+      "Internship: " + internship + "\n" +
+      "Year: " + year + "\n" +
+      "Major: " + major + "\n" 
+   );
+
+   $.getJSON("studentInfo.json", function (json) {
+      json[json.length] = newInfo; // this will show the info it in firebug console
+      console.log(json);
+   });
+
+   closeForm();
 }
 
 function studentsList(value) {
@@ -75,37 +122,44 @@ function draw_table() {
             "</tr>";
          // ITERATING THROUGH OBJECTS
          if (preferences == "interest" || preferences == "internship") {
-            $.each(data, function (key, value) {
-               if (value[preferences].indexOf(specific) >= 0) {
-                  student += studentsList(value);
-               }
-            });
+            if (specific == "None") {
+               $.each(data, function (key, value) {
+                  if (value[preferences].length != 0) {
+                     student += studentsList(value);
+                  }
+               });
+            } else {
+               $.each(data, function (key, value) {
+                  if (value[preferences].indexOf(specific) >= 0) {
+                     student += studentsList(value);
+                  }
+               });
+            }
          } else {
-            $.each(data, function (key, value) {
-               if (value[preferences] == specific) {
-                  //CONSTRUCTION OF ROWS HAVING
-                  // DATA FROM JSON OBJECT
+            if (specific == "None") {
+               $.each(data, function (key, value) {
                   student += studentsList(value);
-               }
-            });
-         }
+               });
+            } else {
+               $.each(data, function (key, value) {
+                  if (value[preferences] == specific) {
+                     //CONSTRUCTION OF ROWS HAVING
+                     // DATA FROM JSON OBJECT
+                     student += studentsList(value);
+                  }
+               });
+            }
 
-         // if (hasData) {
-         //    student += '<tr>'+
-         //    '<td colspan = "7>' +
-         //    'There is no student for that specific category yet.'+
-         //    '</td></tr>' ;  
-         //    console.log(student);
-         // }
-         //INSERTING ROWS INTO TABLE
+         }
+         // INSERTING ROWS INTO TABLE
          document.getElementById("table").innerHTML = student;
       });
 }
 
 function openForm() {
-   document.getElementById("myForm").style.display = "block";
- }
- 
- function closeForm() {
-   document.getElementById("myForm").style.display = "none";
- }
+   document.getElementById("newUser").style.display = "block";
+}
+
+function closeForm() {
+   document.getElementById("newUser").style.display = "none";
+}

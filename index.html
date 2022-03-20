@@ -64,7 +64,7 @@
 		</form>
 		<button onclick="draw_table()" class="button-1">Search</button>
 		<script src="script.js"></script> <!-- Link to the javascript file -->
-		<button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+		<button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal" onclick=openForm() >
 			Create New User
 		</button>
 		<h1>Results</h1>
@@ -88,7 +88,7 @@
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content clearfix">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick=closeForm()><span
 									aria-hidden="true">×</span></button>
 							<div class="modal-body">
 								<h3 class="title">Create a New User</h3>
@@ -125,20 +125,7 @@
 									<input type="text" class="form-control" id="major" name="major"
 										placeholder="Major"><br>
 								</div>
-								<!-- <div class="form-group">
-							<span class="input-icon"><i class="fa fa-user"></i></span>
-							<input type="email" class="form-control" placeholder="Enter Your Name">
-						</div>
-						<div class="form-group">
-							<span class="input-icon"><i class="fas fa-key"></i></span>
-							<input type="password" class="form-control" placeholder="Password">
-						</div>
-						<div class="form-group checkbox">
-							<input type="checkbox">
-							<label>Remamber me</label>
-						</div>
-						<a href="" class="forgot-pass">Forgot Password?</a> -->
-								<button class="btn">Login</button>
+								<button class="btn" onclick=addNewUser()>Create User</button>
 							</div>
 						</div>
 					</div>

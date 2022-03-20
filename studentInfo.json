@@ -1,80 +1,408 @@
-[{
-        "name": "Alex Meraz",
-        "age": 24,
-        "email": "ameraz@email.com",
-        "interest":["Bowling","Soccer","Cooking"],
-        "internship":["Google"],
-        "year":"Junior",
-        "major":"Computer Science"
-      }, {
-        "name": "Mohammed Rafi",
-        "age": 21,
-        "email": "mrafi@email.com",
-        "interest":["Bowling"],
-        "internship":["Microsoft","Google"],
-        "year":"Sophomore",
-        "major":"Computer Science"
-      }, {
-        "name": "Raja Tamil",
-        "age": 31,
-        "email": "rtamil@email.com",
-        "interest":["Soccer","bowling"],
-        "internship":["Google","Faithlife"],
-        "year":"Junior",
-        "major":"Computer Science"
-      }, {
-        "name": "Sundar Pichai",
-        "age": 21,
-        "email": "spichai@email.com",
-        "interest":["Bowling","Swimming"],
-        "internship":["Microsoft","F5"],
-        "year":"Junior",
-        "major":"Computer Science"
-      },
-      {
-        "name": "Nirjal Shakya",
-        "age": 21,
-        "email": "nshakya@email.com",
-        "interest":["Bowling","Swimming"],
-        "internship":["Microsoft","Schweitzer"],
-        "year":"Junior",
-        "major":"Computer Science"
-      },
-      {
-        "name": "Jan Doe",
-        "age": 21,
-        "email": "Jdoe@email.com",
-        "interest":["Dating","Swimming"],
-        "internship":["Microsoft","Apple"],
-        "year":"Graduated",
-        "major":"Computer Science"
-      },
-      {
-        "name": "Michael Lie",
-        "age": 21,
-        "email": "mlie@email.com",
-        "interest":["Bowling","Swimming"],
-        "internship":["Google","Apple"],
-        "year":"Junior",
-        "major":"Computer Science"
-      },
-      {
-        "name": "Satish Parajuli",
-        "age": 21,
-        "email": "sparajuli@email.com",
-        "interest":["Bowling","Swimming","Volleyball"],
-        "internship":["Microsoft","Schweitzer"],
-        "year":"Junior",
-        "major":"Computer Science"
-      },
-      {
-        "name": "Mark",
-        "age": 21,
-        "email": "mark@email.com",
-        "interest":["Bowling","Swimming","Travelling"],
-        "internship":["FaithLife","F5"],
-        "year":"Junior",
-        "major":"Computer Science"
-      }
-      
+[
+  {
+    "name": "Alex Meraz",
+    "age": 24,
+    "email": "ameraz@email.com",
+    "interest": [
+      "Bowling",
+      "Soccer",
+      "Cooking"
+    ],
+    "internship": [
+      "Google"
+    ],
+    "year": "Junior",
+    "major": "Business"
+  },
+  {
+    "name": "Mohammed Rafi",
+    "age": 20,
+    "email": "mrafi@email.com",
+    "interest": [
+      "Bowling"
+    ],
+    "internship": [
+      "Microsoft",
+      "Google"
+    ],
+    "year": "Sophomore",
+    "major": "Human Computer Interaction"
+  },
+  {
+    "name": "Raja Tamil",
+    "age": 31,
+    "email": "rtamil@email.com",
+    "interest": [
+      "Soccer",
+      "bowling"
+    ],
+    "internship": [
+      "Google",
+      "Faithlife"
+    ],
+    "year": "Junior",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Sundar Pichai",
+    "age": 21,
+    "email": "spichai@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming"
+    ],
+    "internship": [
+      "Microsoft",
+      "F5"
+    ],
+    "year": "Junior",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Nirjal Shakya",
+    "age": 21,
+    "email": "nshakya@email.com",
+    "interest": [
+      "Cooking"
+    ],
+    "internship": [
+      "Schweitzer"
+    ],
+    "year": "Junior",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Jan Doe",
+    "age": 22,
+    "email": "Jdoe@email.com",
+    "interest": [
+      "Swimming"
+    ],
+    "internship": [],
+    "year": "Graduated",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Michael Lie",
+    "age": 21,
+    "email": "mlie@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming"
+    ],
+    "internship": [
+      "Google",
+      "Apple"
+    ],
+    "year": "Junior",
+    "major": "Mathematics"
+  },
+  {
+    "name": "Satish Parajuli",
+    "age": 21,
+    "email": "sparajuli@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming",
+      "Volleyball"
+    ],
+    "internship": [],
+    "year": "Junior",
+    "major": "Psychology"
+  },
+  {
+    "name": "Mark",
+    "age": 21,
+    "email": "mark@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming",
+      "Travelling"
+    ],
+    "internship": [
+      "FaithLife",
+      "F5"
+    ],
+    "year": "Junior",
+    "major": "Data Science"
+  },
+  {
+    "name": "John Doe",
+    "age": 18,
+    "email": "jdoe@email.com",
+    "interest": [
+      "Hiking"
+    ],
+    "internship": [],
+    "year": "Freshmen",
+    "major": "Mathematics"
+  },
+  {
+    "name": "Alex Meraz",
+    "age": 24,
+    "email": "ameraz@email.com",
+    "interest": [
+      "Bowling",
+      "Soccer",
+      "Cooking"
+    ],
+    "internship": [
+      "Google"
+    ],
+    "year": "Junior",
+    "major": "Business"
+  },
+  {
+    "name": "Mohammed Rafi",
+    "age": 20,
+    "email": "mrafi@email.com",
+    "interest": [
+      "Bowling"
+    ],
+    "internship": [
+      "Microsoft",
+      "Google"
+    ],
+    "year": "Sophomore",
+    "major": "Human Computer Interaction"
+  },
+  {
+    "name": "Raja Tamil",
+    "age": 31,
+    "email": "rtamil@email.com",
+    "interest": [
+      "Soccer",
+      "bowling"
+    ],
+    "internship": [
+      "Google",
+      "Faithlife"
+    ],
+    "year": "Junior",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Sundar Pichai",
+    "age": 21,
+    "email": "spichai@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming"
+    ],
+    "internship": [
+      "Microsoft",
+      "F5"
+    ],
+    "year": "Junior",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Nirjal Shakya",
+    "age": 21,
+    "email": "nshakya@email.com",
+    "interest": [
+      "Cooking"
+    ],
+    "internship": [
+      "Schweitzer"
+    ],
+    "year": "Junior",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Jan Doe",
+    "age": 22,
+    "email": "Jdoe@email.com",
+    "interest": [
+      "Swimming"
+    ],
+    "internship": [],
+    "year": "Graduated",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Michael Lie",
+    "age": 21,
+    "email": "mlie@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming"
+    ],
+    "internship": [
+      "Google",
+      "Apple"
+    ],
+    "year": "Junior",
+    "major": "Mathematics"
+  },
+  {
+    "name": "Satish Parajuli",
+    "age": 21,
+    "email": "sparajuli@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming",
+      "Volleyball"
+    ],
+    "internship": [],
+    "year": "Junior",
+    "major": "Psychology"
+  },
+  {
+    "name": "Mark",
+    "age": 21,
+    "email": "mark@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming",
+      "Travelling"
+    ],
+    "internship": [
+      "FaithLife",
+      "F5"
+    ],
+    "year": "Junior",
+    "major": "Data Science"
+  },
+  {
+    "name": "John Doe",
+    "age": 18,
+    "email": "jdoe@email.com",
+    "interest": [
+      "Hiking"
+    ],
+    "internship": [],
+    "year": "Freshmen",
+    "major": "Mathematics"
+  },
+  {
+    "name": "Alan Merin",
+    "age": 25,
+    "email": "amerin@email.com",
+    "interest": [
+      "Snowboarding"
+    ],
+    "internship": [
+      "Uber"
+    ],
+    "year": "Senior",
+    "major": "Applied Mathematics"
+  },
+  {
+    "name": "Mon Iraf",
+    "age": 19,
+    "email": "miraf@email.com",
+    "interest": [
+      "Skiing",
+      "Hiking"
+    ],
+    "internship": [
+      "Aon"
+    ],
+    "year": "Junior",
+    "major": "Communications"
+  },
+  {
+    "name": "Roger Trev",
+    "age": 21,
+    "email": "rtrev@email.com",
+    "interest": [
+      "Soccer"
+    ],
+    "internship": [],
+    "year": "Freshmen",
+    "major": "Philosophy"
+  },
+  {
+    "name": "Surender Paul",
+    "age": 21,
+    "email": "spaul@email.com",
+    "interest": [
+      "Bowling",
+      "Swimming"
+    ],
+    "internship": [],
+    "year": "Freshmen",
+    "major": "Computer Science"
+  },
+  {
+    "name": "Nimesh Shakya",
+    "age": 24,
+    "email": "nshakya@email.com",
+    "interest": [
+      "Fifa",
+      "Soccer",
+      "Marvel"
+    ],
+    "internship": [
+      "Yeti Dispensary"
+    ],
+    "year": "Graduated",
+    "major": "Business"
+  },
+  {
+    "name": "Jason Doe",
+    "age": 22,
+    "email": "Jdoe@email.com",
+    "interest": [
+      "Swimming"
+    ],
+    "internship": [],
+    "year": "Freshmen",
+    "major": "Engish"
+  },
+  {
+    "name": "Michelle Lie",
+    "age": 18,
+    "email": "mlie@email.com",
+    "interest": [
+      "Tiktok",
+      "Swimming"
+    ],
+    "internship": [],
+    "year": "Freshmen",
+    "major": "Biochemistry"
+  },
+  {
+    "name": "Pratisth Pradhan",
+    "age": 22,
+    "email": "ppradhan@email.com",
+    "interest": [
+      "Videography",
+      "Tae Kwon Do",
+      "Volleyball"
+    ],
+    "internship": [],
+    "year": "Senior",
+    "major": "Business"
+  },
+  {
+    "name": "Hamilton Ruffalo",
+    "age": 26,
+    "email": "hruffalo@email.com",
+    "interest": [
+      "Travelling"
+    ],
+    "internship": [
+      "FaithLife",
+      "F5"
+    ],
+    "year": "Junior",
+    "major": "Data Science"
+  },
+  {
+    "name": "John Ramsay",
+    "age": 26,
+    "email": "jdoe@email.com",
+    "interest": [
+      "Hiking"
+    ],
+    "internship": [
+      "Apple",
+      "Google",
+      "Microsoft"
+    ],
+    "year": "Graduated",
+    "major": "Computer Science"
+  }
 ]
