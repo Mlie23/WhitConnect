@@ -1,0 +1,20 @@
+{
+    "Internship": [
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Uber"
+    ],
+    "Interest": [
+        "bowling",
+        "cooking",
+        "soccer"
+    ],
+    "Year": [
+        "freshman",
+        "sophomore",
+        "junior",
+        "senior",
+        "graduated"
+    ]
+}

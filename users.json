@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Alex Meraz",
+        "age": 24,
+        "email": "ameraz@email.com",
+        "Interest": [
+            "bowling",
+            "soccer",
+            "cooking"
+        ],
+        "Internship": ["Microsoft"],
+        "Year": "Junior"
+    },
+    {
+        "name": "Mohammed Rafi",
+        "age": 21,
+        "email": "mrafi@email.com",
+        "Interest": ["bowling"],
+        "Internship": ["Google"],
+        "Year": "Junior"
+    },
+    {
+        "name": "Raja Tamil",
+        "age": 31,
+        "email": "rtamil@email.com",
+        "Interest": ["bowling"],
+        "Internship": ["Amazon"],
+        "Year": "Junior"
+    },
+    {
+        "name": "Sundar Pichai",
+        "age": 21,
+        "email": "spichai@email.com",
+        "Interest": ["bowling"],
+        "Internship": ["Uber"],
+        "Year": "Junior"
+    }
+]
