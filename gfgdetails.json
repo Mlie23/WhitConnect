@@ -70,9 +70,9 @@
       {
         "name": "Mark",
         "age": 21,
-        "email": "mlie@email.com",
+        "email": "mark@email.com",
         "interest":["Bowling","Swimming","Travelling"],
-        "internship":["Faithlife","F5"],
+        "internship":["FaithLife","F5"],
         "year":"Junior",
         "major":"Computer Science"
       }
